@@ -43,3 +43,5 @@ You can find API Gateway exported specification [here](https://github.com/gytis-
 There are a lot of To do's and comments throughout the project to improve code quality.
 
 Would document API Gateway more to have better openapi specification. Currently code generated swagger works locally with more information on request/response types.
+
+Would add integration tests for checking if the flow works fully.
