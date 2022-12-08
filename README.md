@@ -36,7 +36,10 @@ This endpoint requires API Key to work. Add an ```x-api-key``` header to the req
 Example: ```DELETE /applied-filter-rules/123456789123```
 Afterwards, if there are no filters anymore - stops the retrieval process
 
+You can find API Gateway exported specification [here](https://github.com/gytis-valukonis/twitter-sourcer/blob/main/docs/openapi.yaml)
+
 ## To improve
 
 There are a lot of To do's and comments throughout the project to improve code quality.
+
 Would document API Gateway more to have better openapi specification. Currently code generated swagger works locally with more information on request/response types.
