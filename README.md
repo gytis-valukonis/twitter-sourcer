@@ -13,6 +13,30 @@ Additionally, there is a serverless .NET API hosted on Lambda to allow accessing
 
 The lambda then, is exposed through API Gateway and requires and API key to change rules.
 
+## API Endpoints
+
+The API can be accessed here: https://k7e61diwe0.execute-api.eu-central-1.amazonaws.com/default
+
+### _GET_ /tweets
+This endpoint retrieves tweets by day. Requires query parameter _date_ to work.
+Example: ```GET /tweets?date=2022-12-08```
+
+### _GET_ /applied-filter-rules
+This endpoint gets currently set filter rules for the tweet streaming.
+Example: ```GET /applied-filter-rules```
+
+### _POST_ /applied-filter-rules
+This endpoint requires API Key to work. Add an ```x-api-key``` header to the request.
+Example: ```POST /applied-filter-rules```
+Body: ```{ value: "example" }```
+Afterwards, if there is no filter set previously - starts the retrieval process
+
+### _DELETE_ /applied-filter-rules/{id}
+This endpoint requires API Key to work. Add an ```x-api-key``` header to the request.
+Example: ```DELETE /applied-filter-rules/123456789123```
+Afterwards, if there are no filters anymore - stops the retrieval process
+
 ## To improve
 
 There are a lot of To do's and comments throughout the project to improve code quality.
+Would document API Gateway more to have better openapi specification. Currently code generated swagger works locally with more information on request/response types.
