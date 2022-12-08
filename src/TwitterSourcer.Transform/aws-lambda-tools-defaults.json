@@ -1,0 +1,9 @@
+{
+  "profile": "default",
+  "region": "eu-central-1",
+  "configuration": "Release",
+  "function-runtime": "dotnet6",
+  "function-memory-size": 256,
+  "function-timeout": 30,
+  "function-handler": "TwitterSourcer.Transform::TwitterSourcer.Transform.Function::FunctionHandler",
+}
